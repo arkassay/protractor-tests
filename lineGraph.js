@@ -7,14 +7,21 @@ describe('TwG Category Trends Tool line graph', function() {
     return styles.indexOf('display: block;') > -1 ? true : false;
   }
 
+  var scrollToModule = function(moduleElement) {
+    browser.driver.executeScript(
+      'arguments[0].scrollIntoView(true);', moduleElement.getWebElement());
+  }
+
   // line graph module tests.
   describe('A legend for an interactive line graph',
       function() {
+    var graphModule = element(by.css('.line-graph'));
     var legendElements = element.all(by.repeater('item in searchGraphCtrl.legendItems'));
     var graphLines = element(by.css('.group-lines'));
 
     beforeEach(function() {
       browser.get('https://travel-tool-test-dot-twg-ae-dev.appspot.com/category-trends/travel-hotel-q2-2015.html');
+      scrollToModule(graphModule);
     });
 
     it('should have all legend items.', function() {

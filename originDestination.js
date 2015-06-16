@@ -7,6 +7,11 @@ describe('TwG Category Trends Tool origin destination', function() {
     return styles.indexOf('display: block;') > -1 ? true : false;
   }
 
+  var scrollToModule = function(moduleElement) {
+    browser.driver.executeScript(
+      'arguments[0].scrollIntoView(true);', moduleElement.getWebElement());
+  }
+
   // line graph module tests.
   describe('A legend for an interactive line graph',
       function() {
@@ -18,6 +23,7 @@ describe('TwG Category Trends Tool origin destination', function() {
 
     it('should show 10 results on page load.', function() {
       resultWrapper.each(function(resultSet, index) {
+        scrollToModule(resultSet);
         var resultElements = resultSet.all(by.repeater('result in originDestCtrl.results'));
         expect(resultElements.count()).toEqual(10);
       });

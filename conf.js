@@ -1,5 +1,5 @@
 // conf.js
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['originDestination.js']
+  specs: ['lineGraph.js', 'originDestination.js']
 }
