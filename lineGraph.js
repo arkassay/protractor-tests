@@ -20,7 +20,8 @@ describe('TwG Category Trends Tool line graph', function() {
     var graphLines = element(by.css('.group-lines'));
 
     beforeEach(function() {
-      browser.get('https://travel-tool-test-dot-twg-ae-dev.appspot.com/category-trends/travel-hotel-q2-2015.html');
+      browser.get('https://travel-tool-test-dot-twg-ae-dev.appspot.com/' +
+          'category-trends/travel-hotel-q2-2015.html');
       scrollToModule(graphModule);
     });
 
@@ -80,7 +81,8 @@ describe('TwG Category Trends Tool line graph', function() {
     var insightPoints = element.all(by.css('.graph-insight'));
 
     beforeEach(function() {
-      browser.get('https://travel-tool-test-dot-twg-ae-dev.appspot.com/category-trends/travel-hotel-q2-2015.html');
+      browser.get('https://travel-tool-test-dot-twg-ae-dev.appspot.com/' +
+          'category-trends/travel-hotel-q2-2015.html');
     });
 
     it('should show an insight on page load.', function() {
