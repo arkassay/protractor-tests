@@ -1,11 +1,4 @@
 describe('TwG Category Trends Tool origin destination', function() {
-  var hasClass = function(elClasses, classname) {
-    return elClasses.indexOf(classname) > -1 ? true : false;
-  }
-
-  var isShowing = function(styles) {
-    return styles.indexOf('display: block;') > -1 ? true : false;
-  }
 
   var scrollToModule = function(moduleElement) {
     browser.driver.executeScript(

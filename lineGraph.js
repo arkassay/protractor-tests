@@ -16,7 +16,8 @@ describe('TwG Category Trends Tool line graph', function() {
   describe('A legend for an interactive line graph',
       function() {
     var graphModule = element(by.css('.line-graph'));
-    var legendElements = element.all(by.repeater('item in searchGraphCtrl.legendItems'));
+    var legendElements = element.all(by.repeater(
+        'item in searchGraphCtrl.legendItems'));
     var graphLines = element(by.css('.group-lines'));
 
     beforeEach(function() {
