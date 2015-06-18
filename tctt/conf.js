@@ -5,5 +5,10 @@ exports.config = {
   // specs: ['tooltips.js'],
   onPrepare: function() {
     browser.driver.manage().window().maximize();
-  }
+  },
+  maxSessions: 1,
+  multiCapabilities: [
+    {'browserName': 'chrome'},
+    {'browserName': 'firefox'}
+  ]
 }
